@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>ハローワークの紹介（仮）</title>
+	<meta name="description" content="#">
+	<meta name="keyword" content="#">
+	<link href="https://fonts.googleapis.com/css?family=Sawarabi+Gothic&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/normalize.css">
+    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+<header>
+	<h1>求職者に対する支援制度</h1>
+	<nav>
+		<input id="menu" type="checkbox">
+		<label for="menu">
+			<div>
+				<p>
+					<i class="fas fa-bars"></i> メニュー一覧
+				</p>
+			</div>
+		</label>	
+		<ul>
+			<li><a href="index.html">ホーム</a></li>
+			<li><a href="training.html">職業訓練について</a></li>
+			<li><a href="mothers.html">子育て中の方へ</a></li>
+			<li><a href="contact.html">お問い合わせ</a></li>			
+		</ul>
+	</nav>
+</header>
+<div class="header-img contact-banner fade-in">
+</div>
+<div class="top">
+	<a href="#top">トップへ</a>
+</div>
+<main class="contact-main fade-in">
+    <h2 class="contact-heading">お問い合わせ</h2>
+    <section class="description">
+        <h3>フォームの練習</h3>
+        <p>
+            このページはPHPの学習で重要になる、フォーム要素の練習のために作成した。
+        </p>
+        <p>
+            実際にフォームの機能を付けられるようになるのが楽しみ。
+        </p>
+    </section>
+    <div class="contact-flex">
+        <div class="contact-left">
+            <section>
+                <h3>連絡先</h3>
+                <dl>
+                    <dt><i class="fas fa-phone"></i> 電話番号</dt>
+                    <dd>0123456789</dd>
+                    <dt><i class="fas fa-envelope"></i> メール</dt>
+                    <dd>abcdefg@email.com</dd>
+                    <dt><i class="fas fa-home"></i> 住所</dt>
+                    <dd>大阪府大阪市大坂町OO-OO</dd>
+                </dl>
+            </section>
+            <section>
+                <h3>フォーム</h3>
+                <form action="#" method="POST">
+                    <p>
+                        <label>
+                            お名前<br>
+                            <input type="text" name="name">
+                        </label>
+                    </p>
+                    <p>
+                        性別<br>
+                        <label>
+                            男<input type="radio" name="sex" value="male">
+                        </label>
+                        <label>
+                            女<input type="radio" name="sex" value="female"> 
+                        </label>
+                        <label>
+                            その他<input type="radio" name="sex" value="others">
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            メールアドレス<br>
+                            <input type="email" name="mail">
+                        </label>
+                    </p>
+                    <p>
+                        <label>
+                            お問い合わせ内容<br>
+                            <textarea name="content" ></textarea>
+                        </label>
+                    </p>
+                    <p>
+                        <input type="submit" value="送信">
+                    </p>
+                </form>
+            </section>
+        </div>
+        <section class="contact-right">
+            <!-- <img src="images/contact2.jpg" alt="contact-us"> -->
+            <div class="ggmap">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d3279.9111259114425!2d135.4941006!3d34.7074215!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000e68fe78cafbb%3A0xa5a8ea765a0c91c4!2z44OR44K944Kz44Oz44K544Kv44O844OrIExhTGHjg6HjgqTjg4Q!5e0!3m2!1sja!2sjp!4v1579670001247!5m2!1sja!2sjp" width="640" height="360" frameborder="0" style="border:0;" allowfullscreen=""></iframe>            </div>
+            <input id="references" type="checkbox">
+            <label for="references">
+                <h3><i class="fas fa-bars"></i> 参考にさせていただいたページ</h3>
+            </label>
+            <ul>
+                <li>
+                    <a href="https://jsite.mhlw.go.jp/osaka-hellowork/kyushokusha/new_page_8.html">大阪ハローワーク職業訓練のご案内</a>
+                </li>
+                <li>
+                    <a href="https://jsite.mhlw.go.jp/osaka-mother/">大阪マザーズハローワーク</a>
+                </li>
+            </ul>
+        </section>
+    </div>
+</main>
+<footer>
+	<small>&copy;フッター</small>
+</footer>
+</div>
+</body>
+</html>

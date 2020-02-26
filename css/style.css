@@ -1,0 +1,563 @@
+@charset "UTF-8";
+
+html {
+	font-size: 18px;
+	font-family: 'Sawarabi Gothic', sans-serif;
+	color: #222;
+	line-height: 1.3;
+}
+
+.container {
+	margin: 0 1em;
+}
+
+a {
+	text-decoration: none;
+	color: #00a85c;
+	display: block;
+}
+
+main a {
+	display: inline;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+}
+
+h4 {
+	margin: 1em 0;
+}
+
+strong {
+	color: #dc143c;
+}
+
+/* fade-inアニメーション */
+.fade-in {
+	animation: fade-in .5s linear .15s 1;
+	animation-fill-mode: forwards;
+	opacity: 0;
+}
+
+@keyframes fade-in{
+	100% {
+		opacity: 1;
+	}
+}
+
+/* ここからナビゲーション */
+nav {
+	margin-bottom: 1em;
+}
+
+#menu {
+    display: none;
+}
+
+nav ul {
+	display: none;
+}
+
+#menu:checked ~ ul {
+	display: block;
+}
+
+nav ul li {
+	padding-bottom: .33em;
+}
+
+/* ナビゲーションここまで */
+
+/* トップへ戻るボタン */
+.top {
+	width: 100px;
+	height: 40px;
+	position: fixed;
+	z-index: 1;
+	bottom: 20px;
+	right: 20px;
+	background-color: #008b8b;
+	opacity: 0.8;
+	text-align: center;
+	border-radius: 50%;
+}
+
+.top a {
+	color: #fff;
+	/* line-heightで中央寄せ */
+	line-height: 40px;
+}
+
+/* ここからヘッダー画像 */
+.header-img {
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-position: center center;
+	height: 150px;
+}
+
+.home-banner {
+	background-image: url(../images/success2.jpg);
+	background-position: 80% 10%;
+}
+
+.training-banner {
+	background-image: url(../images/study.jpg);
+}
+
+.mothers-banner {
+	background-image: url(../images/mother.jpg);
+}
+
+.contact-banner {
+	background-image: url(../images/contact.png);
+}
+
+/* ヘッダー画像ここまで */
+
+/* index.html */
+.description {
+	background-color: #f5f5f5;
+	padding: .5em;
+}
+
+.service {
+	border-bottom: 1px solid #000;
+	width: 100%;
+}
+
+.service:nth-of-type(3) {
+	border: none;
+}
+
+
+.service:nth-of-type(4) {
+	display: none;
+}
+
+.service a {
+	background-color: #32cd32;
+	color: #fff;
+	border-radius: 5px;
+	padding: .2em;
+	opacity: .8;
+}
+
+.service a:hover {
+	opacity: 1;
+	color: #fff;
+} 
+
+img {
+	width: 100%;
+}
+
+/* スライドショー機能 */
+.index-main input {
+	display: inline;
+	width: auto;
+}
+
+#slideshow-button:checked ~
+.services {
+	position: relative;
+	overflow: hidden;
+	height: 500px;
+}
+
+#slideshow-button:checked ~
+.services .service {
+	position: absolute;
+	left: 100%;
+	animation: slideshow 12s ease infinite;
+	border: none;
+}
+
+#slideshow-button:checked ~
+.services .service:nth-of-type(1) {
+	animation-delay: 0s;
+}
+
+#slideshow-button:checked ~
+.services .service:nth-of-type(2) {
+	animation-delay: 4s;
+}
+
+#slideshow-button:checked ~
+.services .service:nth-of-type(3) {
+	animation-delay: 8s;
+}
+
+@keyframes slideshow {
+	0% { 
+		left: 100%;
+	}
+	2% {
+		left: 0%;
+	}
+	33% {
+		left: 0;	
+	}
+	35% {
+		left: -100%;
+	}
+	100% {
+		left: -100%;
+	}
+}
+/* スライドショー機能ここまで */
+
+input,
+textarea {
+    display: block;
+    width: 80%;
+	margin-top: .5em;
+}
+
+input[type="radio"] {
+	display: inline-block;
+	width: 2em;
+}
+
+table {
+	border: 1px solid #000;
+	border-collapse: collapse;	
+}
+
+td,
+th {
+	border: 1px solid #000;
+	padding: 0.5em;
+}
+
+th {
+	background-color: #c0c0c0;
+}
+
+td:first-of-type {
+	font-weight: bold;
+	text-align: center;
+}
+
+/* グーグルマップの設定 */
+.ggmap {
+	position: relative;
+	width: 100%;
+	padding-top: 56.25%;
+	display: block;
+}
+
+.ggmap iframe {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+/* グーグルマップの設定ここまで */
+
+/* 参考サイトリストの設定 */
+#references ~ ul {
+	display: none;
+}
+
+/* チェックボックスを見えなくする */
+#references {
+	display: none;
+}
+
+#references:checked ~ ul {
+	display: block;
+}
+
+/* フッター */
+footer {
+	border-top: 1px solid #222;
+	background-color: rgba(255, 160, 122, .3);
+}
+
+footer h3 {
+	font-weight: normal;
+	font-size: 1em;
+	margin: 0;
+}
+
+footer section {
+	margin: .5em 0;
+}
+
+@media(min-width: 768px) {
+	main {
+		width: 80%;
+		margin: 0 auto;
+	}
+
+	h1 {
+		text-align: center;
+	}
+
+	/* ハンバーガーメニューを消す */
+	nav input,
+	nav label {
+		display: none;
+	}
+
+	/* メニューを表示 */
+	nav ul {
+		display: block;
+	}
+
+	nav ul {
+		text-align: center;
+	}
+
+	/* メニューを横並びに */
+	nav li {
+		display: inline-block;
+		width: 20%;
+	}
+	
+	/* navホバー時の色指定 */
+	a:hover {
+		color: #ab0012;
+	}
+	
+	.header-img {
+		height: 250px;
+	}
+	
+	/* ここからPC向けindex.html */
+	h2 {
+		text-align: center;
+	}
+
+	.description h3 {
+		text-align: left;
+	}
+
+	.description {
+		margin: .8em auto;
+	}
+
+	.description p,
+	.description h3 {
+		width: 90%;
+		margin: .8em auto;
+	}
+	
+	.service {
+		margin: 0 auto;
+		border-bottom: none;
+	}
+
+	.service:nth-of-type(3) img {
+		border: 1px solid #222;
+	}
+
+	/* PC向けスライドショー機能 */
+	/* PC向け一覧表示 */
+	#list-button:checked ~
+	.services .service:nth-of-type(4) {
+		display: block;
+	}
+
+	#list-button:checked ~ 
+	.services {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+	#list-button:checked ~
+	.services .service {
+		width: 40%;
+		padding: 0 1em;
+		box-sizing: border-box;
+	}
+
+	/* PC向けスライドショー表示 */
+	#slideshow-button:checked ~
+	.services .service {
+		position: absolute;
+		left: 100%;
+		animation: slideshow 9s linear infinite;
+		width: 40%;
+	}
+
+	#slideshow-button:checked ~
+	.services .service:first-of-type {
+		left: 50%;
+		animation-name: slideshow1;
+	}
+
+	#slideshow-button:checked ~
+	.services .service:nth-of-type(1) {
+		animation-delay: 0s;
+	}
+
+	#slideshow-button:checked ~
+	.services .service:nth-of-type(2) {
+		animation-delay: 0s;
+	}
+
+	#slideshow-button:checked ~
+	.services .service:nth-of-type(3) {
+		animation-delay: 3s;
+	}
+
+	@keyframes slideshow1 {
+		0% { 
+			left: 50%;
+		}
+		2% {
+			left: 0%;
+		}
+		33.333% {
+			left: 0%;	
+		}
+		35.333% {
+			left: -50%;
+			opacity: 1;
+		}
+		36% {
+			left: -50%;
+			opacity: 0;
+		}
+		37% {
+			left: 100%;
+			opacity: 0;
+		}
+		66.666% {
+			left: 100%;
+			opacity: 1;
+		}
+
+		68.666% {
+			left: 50%;
+		}
+		100% {
+			left: 50%;
+		}
+	}
+
+	@keyframes slideshow {
+		0% { 
+			left: 100%;
+		}
+		2% {
+			left: 50%;
+		}
+		33.333% {
+			left: 50%;	
+		}
+		35.333% {
+			left: 0%;
+		}
+		66.666% {
+			left: 0%;
+		}
+		68.666% {
+			left: -50%;
+		}
+		100% {
+			left: -50%;
+		}
+	}
+
+	/* PC向けスライドショー機能ここまで */
+	/* index.htmlここまで */
+
+	/* PC向け職業訓練のページ */
+	.training-main section {
+		margin: 1em auto;
+	}
+
+	p {
+		margin: .8em 0;
+	}
+
+	.image-paragraph {
+		box-sizing: border-box;
+		width: 50%;
+		float: left;
+		margin: 0 1em 3em 0;
+	}
+
+	.clear {
+		clear: left;
+	}
+
+	table {
+		margin-top: 1em;
+		width: 100%;
+	}
+
+	/* ここまでPC向け職業訓練 */
+
+	/* PC向けマザーズページ */
+	.mothers-img {
+		width: 100%;
+	}
+
+	.mothers-flex-container {
+		display: flex;
+	}
+
+	.mothers-flex-container section {
+		padding: 1em;
+		width: 50%;
+		justify-content: space-around;
+	}
+
+	/* PC向けマザーズここまで */
+
+	/* PC向けお問い合わせページ */
+	.contact-flex {
+		display: flex;
+		justify-content: space-between;
+	}
+
+	.contact-left,
+	.contact-right {
+		width: 50%;
+	}
+
+	/* グーグルマップの設定 */
+	.ggmap {
+		position: relative;
+		width: 100%;
+		padding-top: 56.25%;
+		display: block;
+	}
+
+	.ggmap iframe {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+	}
+	/* グーグルマップの設定ここまで */
+
+    input,
+    textarea {
+		display: block;
+		width: 50%;
+		box-sizing: border-box;
+	}
+	
+	.contact-main img {
+		display: block;
+	}
+
+	footer {
+		text-align: center;
+		margin-top: 1em;
+		border: none;
+	}
+
+	#references ~ ul {
+		margin: .5em;
+	}
+}
